@@ -4,8 +4,6 @@
 #                  2022/03/06
 ################################################################################
 
-setwd("C:/Users/milos/Downloads")
-
 windowsFonts(georg = windowsFont('Georgia'))
 
 # libraries we need
@@ -62,19 +60,12 @@ clean_data <- function(df, d) {
     as.data.frame()
   names(d)[1] <- "year" #label year column
   d <- d[d$year == "Total", ]  #filter Total values for the period
-  #d[d == "&nbsp"] <- NA #change to NA
   d <- d %>%
          filter_all(any_vars(!is.na(.))) %>% #only complete rows
          gather(country, value, -year) %>% #reshape
          select(country, value) %>% #select only country and value
          mutate(value = as.numeric(value)) # declare value to be numeric
-      #filter(across(everything(), ~ !str_detect(., "&nbsp")))
-      #filter_all(any_vars(!is.na(.))) %>% #only complete rows
-      #gather(country, value, -year) %>% #reshape
-      #mutate(value = as.numeric(value))
-      #group_by(country) %>% #aggregate by country
-      #summarise(arms = sum(value)) # sum of arms imports
-
+  
   return(d)
 }
 
