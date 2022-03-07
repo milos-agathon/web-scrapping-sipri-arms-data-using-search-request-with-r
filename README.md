@@ -5,6 +5,6 @@ In this tutorial, we'll analyze American arms transfer to Europe in the last 5 y
 Using this repo, you'll be able to send a POST request to retrieve data, format and map using non-contiguous cartogram.
 
 
-🧑🏼‍💻 Check the full tutorial at https://milospopovic.net/using-api-make-maps-r/
+🧑🏼‍💻 Check the full tutorial at https://milospopovic.net/web-scrapping-sipri-arms-data-using-search-request-with-r/
 
 ![alt text](https://github.com/milos-agathon/web-scrapping-sipri-arms-data-using-search-request-with-r/blob/main/photo1.png?raw=true)
